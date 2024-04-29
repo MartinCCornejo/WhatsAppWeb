@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 :root{
@@ -10,6 +11,7 @@
     --darkGreen-secondary-color: #111B21;
     --gray-color: #AEBAC1;
     --border-color: #4D565C;
+    --light-color: #E9EDEF;
 }
 
 .btn-icon{
@@ -33,17 +35,23 @@
     margin-bottom: 22px;
 }
 
+.whatsapp-container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
 .navigation-menu{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     background: var(--darkGreen-color);
     padding-top: 17px;
     width: 60px;
-    border-right: 2px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
 }
 
 .navigation-menu .top{
@@ -69,4 +77,65 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
+}
+
+.chats-container{
+    margin-left: 60px;
+    background: var(--darkGreen-secondary-color);
+    padding-top: 12px;
+    width: 430px;
+    border-right: 1px solid var(--border-color);
+}
+
+.chats-container .header{
+    padding: 0 25px 20px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chats-container .header button{
+    margin: 5px auto;
+    padding-left: 13px;
+}
+
+.chats-container .header h1 {
+    color: var(--light-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.chats-container .chat-list .top{
+    margin: 0 13px;
+}
+
+.chats-container .input-container {
+    position: relative;
+}
+
+.chats-container .search-icon{
+    position: absolute;
+    top: 9px;
+    left: 9px;
+}
+
+.chats-container .search-icon svg{
+    width: 23px;
+    height: 23px;
+    color: #889296;
+}
+
+.chats-container .input-container #input-search{
+    background: var(--darkGreen-color);
+    border: none;
+    width: 100%;
+    padding: 8px 60px;
+    border-radius: 10px;
+    outline: none;
+    color: var(--light-color);
+    font-size: 16px;
+}
+
+#input-search::placeholder{
+    color: #889296;
 }
