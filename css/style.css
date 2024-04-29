@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: .3s;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -12,6 +13,7 @@
     --gray-color: #AEBAC1;
     --border-color: #4D565C;
     --light-color: #E9EDEF;
+    --message-color: #889296;
 }
 
 .btn-icon{
@@ -107,6 +109,7 @@
 
 .chats-container .chat-list .top{
     margin: 0 13px;
+    margin-bottom: 10px;
 }
 
 .chats-container .input-container {
@@ -122,7 +125,11 @@
 .chats-container .search-icon svg{
     width: 23px;
     height: 23px;
-    color: #889296;
+    color: var(--message-color);
+}
+
+.chats-container .input-container{
+    margin-bottom: 12px;
 }
 
 .chats-container .input-container #input-search{
@@ -137,5 +144,87 @@
 }
 
 #input-search::placeholder{
-    color: #889296;
+    color: var(--message-color);
 }
+
+.chats-container .chat-list .btn{
+    background: var(--darkGreen-color);
+    color: var(--message-color);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.chats-container .chat-list .btn:focus{
+    background: #0A332C;
+    color: #009D60;
+}
+
+.chats-container .chat-list .bottom{
+    display: grid;
+    grid-template-rows: auto;
+    height: 100%;
+}
+
+.chats-container .chat{
+    height: 75px;
+    display: flex;
+    align-items: center;
+    padding: 5px 13px;
+}
+.chats-container .chat:hover{
+    cursor: pointer;
+    background: var(--darkGreen-color);
+}
+
+.chats-container .chat .img-container{
+    height: 50px;
+    width: 50px;
+}
+
+.chats-container .chat .img-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.chats-container .chat .right{
+    flex-grow: 1;
+    border-bottom: 1px solid #222E35;
+    height: 100%;
+    margin-left: 20px;
+    padding: 6px 0;
+}
+
+.chats-container .chat .right .person{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chats-container .chat .right .person h3{
+    color: var(--light-color);
+    font-size: 18px;
+    font-weight: 400;
+}
+.chats-container .chat .right .person .date{
+    color: var(--message-color);
+    font-size: 13px;
+}
+
+.chats-container .chat .message{
+    color: var(--message-color);
+    font-size: 14.2px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+
+
+
+
+
