@@ -14,6 +14,7 @@
     --border-color: #4D565C;
     --light-color: #E9EDEF;
     --message-color: #889296;
+    --hover-color: #202C33;
 }
 
 .btn-icon{
@@ -177,7 +178,7 @@
 }
 .chats-container .chat:hover{
     cursor: pointer;
-    background: var(--darkGreen-color);
+    background: var(--hover-color);
 }
 
 .chats-container .chat:hover .icon-down{
@@ -246,6 +247,7 @@
     align-items: center;
     background: var(--darkGreen-color);
     flex-grow: 1;
+    position: relative;
 }
 
 .advertising-container .advertising{
@@ -253,7 +255,7 @@
 }
 
 .advertising-container .advertising img{
-    height: 210px;
+    height: 200px;
     margin-bottom: 25px;
 }
 
@@ -274,7 +276,7 @@
     color: var(--darkGreen-color);
     background: var(--green-color);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     padding: 10px 20px;
     font-size: 14px;
     border-radius: 20px;
@@ -283,7 +285,24 @@
     filter: brightness(1.1);
 }
 
+.advertising-container .encrypted-message{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    transform: translateY(150px);
+}
 
+.advertising-container .encrypted-message p{
+    font-size: 14px;
+    color: var(--message-color);
+}
+
+
+.advertising-container .encrypted-message svg{
+    width: 13px;
+    height: 13px;
+    color: var(--message-color);
+}
 
 
 
