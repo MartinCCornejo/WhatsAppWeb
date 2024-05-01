@@ -193,8 +193,8 @@ body{
 }
 
 .chats-container .chat .img-container{
-    height: 50px;
-    width: 50px;
+    height: 49px;
+    width: 49px;
 }
 
 .chats-container .chat .img-container img{
@@ -242,7 +242,11 @@ body{
     color: var(--message-color);
     font-size: 14.2px;
     font-weight: 400;
-    margin-top: 5px;
+    margin-top: 2px;
+    white-space: nowrap; 
+    max-width: 280px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 
 .chats-container .message-container{
@@ -343,6 +347,10 @@ body{
     .chats-container {
         width: 100%;
     }
+    .chats-container .chat .message{
+        max-width: 80vw;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -371,6 +379,10 @@ body{
 
     .navigation-menu .bottom{
         display: none;
+    }
+
+    .chats-container .chat .message{
+        max-width: 65vw;
     }
 }
 
